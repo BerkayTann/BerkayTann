@@ -56,7 +56,7 @@ My main focus now is building end-to-end system architectures and blending them 
   <img alt="Contribution snake" src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake-light.svg?v=4" width="860">
 </picture>
 
-<a href="https://nomlings.cc/badge"><img src="https://nomlings.cc/badge/BerkayTann?pet=byteling&color=%23e64cbd&scale=5" alt="Nomling: eats your real commits" /></a>
+<a href="https://nomlings.cc/badge"><img src="https://nomlings.cc/badge/BerkayTann?pet=byteling&color=%23ff7a1a&scale=5" alt="Nomling: eats your real commits" /></a>
 
 <br/>
 
