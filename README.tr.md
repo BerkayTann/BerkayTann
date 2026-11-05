@@ -72,11 +72,11 @@
 
 <br/>
 
-## Derin Sular
+## Gece Vardiyası
 
 <div align="center">
 
-<img src="./assets/sea.svg" alt="Docker whale and a Cthulhu-style octopus in the deep sea" width="860" />
+<img src="./assets/room.gif" alt="Geceleyin siberpunk piksel sanat odası" width="860" />
 
 </div>
 

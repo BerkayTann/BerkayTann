@@ -72,11 +72,11 @@ My main focus now is building end-to-end system architectures and blending them 
 
 <br/>
 
-## The Deep End
+## Night Shift
 
 <div align="center">
 
-<img src="./assets/sea.svg" alt="Docker whale and a Cthulhu-style octopus in the deep sea" width="860" />
+<img src="./assets/room.gif" alt="Cyberpunk pixel-art room at night" width="860" />
 
 </div>
 
