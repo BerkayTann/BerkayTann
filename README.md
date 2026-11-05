@@ -6,7 +6,12 @@
 
 <div align="center">
 
-<img src="./assets/banner.svg" alt="Berkay Tan — DevOps × JavaScript" width="860" />
+<a href="https://ascii.rest/banner/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://ascii.rest/banner/Berkay%20Tan.dark.svg?color=fcee0a,00f0ff,ff2a9d&effect=type&tagline=DevOps%20x%20JavaScript&size=s&bg=353e4b">
+    <img alt="Berkay Tan: DevOps x JavaScript" src="https://ascii.rest/banner/Berkay%20Tan.svg?color=fcee0a,00f0ff,ff2a9d&effect=type&tagline=DevOps%20x%20JavaScript&size=s&bg=353e4b">
+  </picture>
+</a>
 
 <img src="./assets/scramble.svg" alt="berkay@infra:~$ whoami" width="760" />
 
@@ -51,7 +56,7 @@ My main focus now is building end-to-end system architectures and blending them 
   <img alt="Contribution snake" src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake-light.svg" width="860">
 </picture>
 
-<img src="./assets/pet.svg" alt="Pixel pet eating commits" width="860" />
+<a href="https://nomlings.cc/badge"><img src="https://nomlings.cc/badge/BerkayTann?pet=byteling&color=%23e64cbd&scale=5" alt="Nomling: eats your real commits" /></a>
 
 <br/>
 
