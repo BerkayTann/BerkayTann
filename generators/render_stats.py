@@ -1,4 +1,4 @@
-"""data.json -> stats.svg, langs.svg, streak.svg, activity.svg (neon palet, koyu panel).
+"""data.json -> overview.svg, streak.svg, activity.svg (neon palet, koyu panel).
 
 Kullanım: python generators/render_stats.py data.json cikti_klasoru
 """
@@ -55,38 +55,32 @@ def streaks(days):
     return cur, best
 
 
-def stats_card(d):
+def overview_card(d):
+    """Tek 860x230 kart: solda istatistikler, sağda dil çubukları (iki panel, aynı genişlik düzeni)."""
     rows = [(tx("commits"), d["commits"]), (tx("prs"), d["prs"]), (tx("issues"), d["issues"]), (tx("stars"), d["stars"]), (tx("repos"), d["repos"])]
-    w, h = 420, 210
-    o = [head(w, h, tx("a_stats")), f'<text x="24" y="38" font-family="{MONO}" font-size="15" font-weight="700" fill="{MAG}">{tx("stats")}</text>']
+    w, h, mid = 860, 230, 430
+    o = [head(w, h, tx("a_stats")),
+         f'<line x1="{mid}" y1="24" x2="{mid}" y2="{h - 24}" stroke="{LINE}"/>',
+         f'<text x="28" y="40" font-family="{MONO}" font-size="15" font-weight="700" fill="{MAG}">{tx("stats")}</text>']
     for i, (k, v) in enumerate(rows):
-        y = 72 + i * 28
-        o.append(f'<text x="24" y="{y}" font-family="{MONO}" font-size="13" fill="{DIM}">{k}</text>')
-        o.append(f'<text x="{w - 24}" y="{y}" text-anchor="end" font-family="{MONO}" font-size="14" font-weight="700" fill="{TXT}">{fmt(v)}</text>')
-        o.append(f'<line x1="24" y1="{y + 9}" x2="{w - 24}" y2="{y + 9}" stroke="{LINE}" stroke-dasharray="2 4"/>')
-    o.append("</svg>")
-    return "".join(o)
-
-
-def langs_card(d):
-    langs = d["langs"][:6]
+        y = 76 + i * 30
+        o.append(f'<text x="28" y="{y}" font-family="{MONO}" font-size="13" fill="{DIM}">{k}</text>')
+        o.append(f'<text x="{mid - 28}" y="{y}" text-anchor="end" font-family="{MONO}" font-size="14" font-weight="700" fill="{TXT}">{fmt(v)}</text>')
+        o.append(f'<line x1="28" y1="{y + 10}" x2="{mid - 28}" y2="{y + 10}" stroke="{LINE}" stroke-dasharray="2 4"/>')
+    langs = d["langs"][:5]
     tot = sum(l[1] for l in langs) or 1
-    w, h = 420, 210
-    o = [head(w, h, tx("a_langs")), f'<text x="24" y="38" font-family="{MONO}" font-size="15" font-weight="700" fill="{CY}">{tx("langs")}</text>']
-    bar_x, bar_w = 24, w - 48
-    x = bar_x
-    o.append(f'<clipPath id="c"><rect x="{bar_x}" y="52" width="{bar_w}" height="10" rx="5"/></clipPath><g clip-path="url(#c)">')
-    for _, size, color in langs:
-        seg = bar_w * size / tot
-        o.append(f'<rect x="{x:.1f}" y="52" width="{seg:.1f}" height="10" fill="{color}"/>')
-        x += seg
-    o.append("</g>")
+    lx = mid + 28
+    o.append(f'<text x="{lx}" y="40" font-family="{MONO}" font-size="15" font-weight="700" fill="{CY}">{tx("langs")}</text>')
+    if not langs:
+        o.append(f'<text x="{lx}" y="86" font-family="{MONO}" font-size="13" fill="{DIM}">-</text>')
+    bar_x, bar_w = lx + 110, w - 28 - 52 - (lx + 110)
     for i, (name, size, color) in enumerate(langs):
-        col, row = i % 2, i // 2
-        cx, cy = 24 + col * 200, 92 + row * 30
-        o.append(f'<circle cx="{cx + 5}" cy="{cy - 4}" r="5" fill="{color}"/>')
-        o.append(f'<text x="{cx + 18}" y="{cy}" font-family="{MONO}" font-size="13" fill="{TXT}">{name}</text>')
-        o.append(f'<text x="{cx + 170}" y="{cy}" text-anchor="end" font-family="{MONO}" font-size="12" fill="{DIM}">{100 * size / tot:.1f}%</text>')
+        y = 76 + i * 30
+        pct = 100 * size / tot
+        o.append(f'<text x="{lx}" y="{y}" font-family="{MONO}" font-size="13" fill="{TXT}">{name[:12]}</text>')
+        o.append(f'<rect x="{bar_x}" y="{y - 10}" width="{bar_w}" height="10" rx="5" fill="{LINE}"/>')
+        o.append(f'<rect x="{bar_x}" y="{y - 10}" width="{max(bar_w * pct / 100, 6):.1f}" height="10" rx="5" fill="{color}"/>')
+        o.append(f'<text x="{w - 28}" y="{y}" text-anchor="end" font-family="{MONO}" font-size="12" fill="{DIM}">{pct:.1f}%</text>')
     o.append("</svg>")
     return "".join(o)
 
@@ -139,6 +133,6 @@ if __name__ == "__main__":
     out.mkdir(parents=True, exist_ok=True)
     for lang in ("en", "tr"):
         L = lang
-        for name, fn in (("stats", stats_card), ("langs", langs_card), ("streak", streak_card), ("activity", activity_card)):
+        for name, fn in (("overview", overview_card), ("streak", streak_card), ("activity", activity_card)):
             (out / (f"{name}.svg" if lang == "en" else f"{name}-{lang}.svg")).write_text(fn(data), encoding="utf-8")
-    print("yazıldı: stats, langs, streak, activity (en/tr)")
+    print("yazıldı: overview, streak, activity (en/tr)")

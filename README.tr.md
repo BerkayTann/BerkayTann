@@ -9,7 +9,7 @@
 <a href="https://ascii.rest/banner/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://ascii.rest/banner/Berkay%20Tan.dark.svg?color=fcee0a,00f0ff,ff2a9d&effect=type&tagline=DevOps%20x%20JavaScript&size=s&bg=353e4b">
-    <img alt="Berkay Tan: DevOps x JavaScript" src="https://ascii.rest/banner/Berkay%20Tan.svg?color=fcee0a,00f0ff,ff2a9d&effect=type&tagline=DevOps%20x%20JavaScript&size=s&bg=353e4b">
+    <img alt="Berkay Tan: DevOps x JavaScript" width="640" src="https://ascii.rest/banner/Berkay%20Tan.svg?color=fcee0a,00f0ff,ff2a9d&effect=type&tagline=DevOps%20x%20JavaScript&size=s&bg=353e4b">
   </picture>
 </a>
 
@@ -25,7 +25,7 @@
 
 Şu anki ana odağım, uçtan uca sistem mimarileri kurmak ve bunu JavaScript ile harmanlayarak stabil projeler geliştirmek.
 
-| | |
+| Alan | Detay |
 |---|---|
 | **Altyapı ve operasyon** | Fiziksel sunuculardan Docker ve Kubernetes tabanlı mikroservis mimarilerine uzanan sistem yönetimi tecrübesi |
 | **Geliştirme disiplini** | Otomatik üretilmiş kod yığınlarına bel bağlamak yerine, yazdığım her satırın sunucuya bindireceği yükü ve mimari maliyetini bilerek ilerlerim. En basit test ortamını bile production-ready titizliğiyle ayağa kaldırırım |
@@ -52,22 +52,21 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake.svg">
-  <img alt="Commit çizelgesi snake animasyonu" src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake-light.svg" width="860">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake.svg?v=3">
+  <img alt="Commit çizelgesi snake animasyonu" src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake-light.svg?v=3" width="860">
 </picture>
 
 <a href="https://nomlings.cc/badge"><img src="https://nomlings.cc/badge/BerkayTann?pet=byteling&color=%23e64cbd&scale=5" alt="Nomling: eats your real commits" /></a>
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/stats-tr.svg" alt="GitHub stats" width="420" />
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/langs-tr.svg" alt="Top languages" width="420" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/overview-tr.svg?v=3" alt="GitHub istatistikleri ve diller" width="860" />
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/streak-tr.svg" alt="Streak" width="860" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/streak-tr.svg?v=3" alt="Streak" width="860" />
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/activity-tr.svg" alt="Activity" width="860" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/activity-tr.svg?v=3" alt="Activity" width="860" />
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/garden-tr.svg" alt="Commit garden" width="860" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/garden-tr.svg?v=3" alt="Commit garden" width="860" />
 
 </div>
 
@@ -86,7 +85,7 @@
 ## İletişim
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/berkaytan"><img src="https://img.shields.io/badge/LinkedIn-berkaytan-161b26?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
-  <a href="https://www.instagram.com/bercode.js"><img src="https://img.shields.io/badge/Instagram-bercode.js-161b26?style=flat-square&logo=instagram&logoColor=E4405F" alt="Instagram" /></a>
-  <a href="mailto:brkytn@gmail.com"><img src="https://img.shields.io/badge/E-posta-brkytn%40gmail.com-161b26?style=flat-square&logo=gmail&logoColor=EA4335" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/berkaytan"><img src="https://img.shields.io/badge/LinkedIn-berkaytan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://www.instagram.com/bercode.js"><img src="https://img.shields.io/badge/Instagram-bercode.js-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+  <a href="mailto:brkytn@gmail.com"><img src="https://img.shields.io/badge/E--posta-brkytn%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
