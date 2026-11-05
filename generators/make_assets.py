@@ -100,7 +100,7 @@ def make_skills():
     # 6. hücre: terminal
     x0, y0 = pad + 2 * cw + 18, pad + ch + 14
     lines = [("$ docker compose up -d", TXT), ("[+] Running 5/5", DIM), (" ✔ db        Healthy", CY), (" ✔ api       Started", CY), (" ✔ web       Started", CY)]
-    o.append(f'<text x="{x0}" y="{y0 + 14}" font-family="{MONO}" font-size="13" font-weight="700" fill="{VIO}">Şu an</text>')
+    o.append(f'<text x="{x0}" y="{y0 + 14}" font-family="{MONO}" font-size="13" font-weight="700" fill="{VIO}">Now</text>')
     for i, (t, c) in enumerate(lines):
         o.append(f'<text x="{x0}" y="{y0 + 44 + i * 18}" font-family="{MONO}" font-size="12" fill="{c}" xml:space="preserve">{esc(t)}</text>')
     o.append(f'<rect x="{x0}" y="{y0 + 44 + 5 * 18 - 10}" width="8" height="14" fill="{MAG}"><animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite" calcMode="discrete"/></rect>')
@@ -140,8 +140,14 @@ def make_marquee():
 
 
 # --------------------------------------------------------------------------- scramble yazı
-def make_scramble():
-    phrases = ["berkay@infra:~$ whoami", "devops × javascript", "10 yıl kurumsal sistem tecrübesi", "altyapıdan arayüze"]
+PHRASES = {
+    "en": ["berkay@infra:~$ whoami", "devops × javascript", "10 years of enterprise systems", "from infrastructure to interface"],
+    "tr": ["berkay@infra:~$ whoami", "devops × javascript", "10 yıl kurumsal sistem tecrübesi", "altyapıdan arayüze"],
+}
+
+
+def make_scramble(lang="en"):
+    phrases = PHRASES[lang]
     pool = list("!<>-_\\/[]{}=+*^?#%&@01")
     rnd = random.Random(7)
     step, hold = 0.045, 2.2
@@ -174,7 +180,7 @@ def make_scramble():
         o.append(f'<text x="{W / 2}" y="29" text-anchor="middle" font-family="{MONO}" font-size="20" font-weight="600" fill="url(#g)" visibility="hidden" xml:space="preserve">{esc(txt)}'
                  f'<animate attributeName="visibility" dur="{total:.2f}s" repeatCount="indefinite" calcMode="discrete" keyTimes="{kts}" values="{vals}"/></text>')
     o.append("</svg>")
-    (OUT / "scramble.svg").write_text("\n".join(o), encoding="utf-8")
+    (OUT / ("scramble.svg" if lang == "en" else f"scramble-{lang}.svg")).write_text("\n".join(o), encoding="utf-8")
 
 
 # --------------------------------------------------------------------------- halfdot hayvanlar
@@ -364,7 +370,7 @@ def make_animals():
 if __name__ == "__main__":
     make_skills()
     make_marquee()
-    make_scramble()
-    make_animals()
+    make_scramble("en")
+    make_scramble("tr")
     for p in sorted(OUT.glob("*.svg")):
         print(f"{p.name:16s}{p.stat().st_size / 1024:7.1f} KB")

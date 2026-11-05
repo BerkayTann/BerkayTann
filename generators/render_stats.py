@@ -9,6 +9,21 @@ from pathlib import Path
 
 MAG, VIO, CY = "#e64cbd", "#b10fd2", "#22d3ee"
 PANEL, LINE, TXT, DIM = "#0d1117", "#2b3345", "#c9d1d9", "#8b949e"
+T = {
+    "en": {"stats": "// stats", "commits": "Commits (2 yrs)", "prs": "Pull requests", "issues": "Issues", "stars": "Stars", "repos": "Repos",
+           "langs": "// languages", "total": "total contributions", "cur": "current streak", "best": "longest streak", "day": "days", "act": "// last 31 days",
+           "a_stats": "GitHub stats", "a_langs": "Top languages", "a_streak": "Contribution streak", "a_act": "Last 31 days activity"},
+    "tr": {"stats": "// istatistikler", "commits": "Son 2 yıl commit", "prs": "Pull request", "issues": "Issue", "stars": "Yıldız", "repos": "Repo",
+           "langs": "// diller", "total": "toplam katkı", "cur": "güncel seri", "best": "en uzun seri", "day": "gün", "act": "// son 31 gün",
+           "a_stats": "GitHub istatistikleri", "a_langs": "En çok kullanılan diller", "a_streak": "Katkı serisi", "a_act": "Son 31 gün aktivite"},
+}
+L = "en"
+
+
+def tx(k):
+    return T[L][k]
+
+
 MONO = "'JetBrains Mono','SFMono-Regular',Consolas,'Courier New',monospace"
 
 
@@ -41,9 +56,9 @@ def streaks(days):
 
 
 def stats_card(d):
-    rows = [("Son 2 yıl commit", d["commits"]), ("Pull request", d["prs"]), ("Issue", d["issues"]), ("Yıldız", d["stars"]), ("Repo", d["repos"])]
+    rows = [(tx("commits"), d["commits"]), (tx("prs"), d["prs"]), (tx("issues"), d["issues"]), (tx("stars"), d["stars"]), (tx("repos"), d["repos"])]
     w, h = 420, 210
-    o = [head(w, h, "GitHub istatistikleri"), f'<text x="24" y="38" font-family="{MONO}" font-size="15" font-weight="700" fill="{MAG}">// istatistikler</text>']
+    o = [head(w, h, tx("a_stats")), f'<text x="24" y="38" font-family="{MONO}" font-size="15" font-weight="700" fill="{MAG}">{tx("stats")}</text>']
     for i, (k, v) in enumerate(rows):
         y = 72 + i * 28
         o.append(f'<text x="24" y="{y}" font-family="{MONO}" font-size="13" fill="{DIM}">{k}</text>')
@@ -57,7 +72,7 @@ def langs_card(d):
     langs = d["langs"][:6]
     tot = sum(l[1] for l in langs) or 1
     w, h = 420, 210
-    o = [head(w, h, "En çok kullanılan diller"), f'<text x="24" y="38" font-family="{MONO}" font-size="15" font-weight="700" fill="{CY}">// diller</text>']
+    o = [head(w, h, tx("a_langs")), f'<text x="24" y="38" font-family="{MONO}" font-size="15" font-weight="700" fill="{CY}">{tx("langs")}</text>']
     bar_x, bar_w = 24, w - 48
     x = bar_x
     o.append(f'<clipPath id="c"><rect x="{bar_x}" y="52" width="{bar_w}" height="10" rx="5"/></clipPath><g clip-path="url(#c)">')
@@ -80,8 +95,8 @@ def streak_card(d):
     cur, best = streaks(d["days"])
     total = sum(d["days"].values())
     w, h = 860, 130
-    cols = [(fmt(total), "toplam katkı", MAG), (f"{cur} gün", "güncel seri", CY), (f"{best} gün", "en uzun seri", VIO)]
-    o = [head(w, h, "Katkı serisi")]
+    cols = [(fmt(total), tx("total"), MAG), (f"{cur} {tx('day')}", tx("cur"), CY), (f"{best} {tx('day')}", tx("best"), VIO)]
+    o = [head(w, h, tx("a_streak"))]
     for i, (v, l, c) in enumerate(cols):
         cx = w / 6 + i * w / 3
         o.append(f'<text x="{cx}" y="64" text-anchor="middle" font-family="{MONO}" font-size="30" font-weight="700" fill="{c}">{v}</text>')
@@ -103,7 +118,7 @@ def activity_card(d):
     ys = [t + (h - t - b) * (1 - v / top) for v in vals]
     line = " ".join(f"{'M' if i == 0 else 'L'}{x:.1f},{y:.1f}" for i, (x, y) in enumerate(zip(xs, ys)))
     area = line + f" L{xs[-1]:.1f},{h - b} L{xs[0]:.1f},{h - b} Z"
-    o = [head(w, h, "Son 31 gün aktivite"), f'<text x="24" y="32" font-family="{MONO}" font-size="15" font-weight="700" fill="{MAG}">// son 31 gün</text>']
+    o = [head(w, h, tx("a_act")), f'<text x="24" y="32" font-family="{MONO}" font-size="15" font-weight="700" fill="{MAG}">{tx("act")}</text>']
     for k in range(5):
         y = t + (h - t - b) * k / 4
         o.append(f'<line x1="{l}" y1="{y:.1f}" x2="{w - r}" y2="{y:.1f}" stroke="{LINE}" stroke-dasharray="2 5"/>')
@@ -122,6 +137,8 @@ if __name__ == "__main__":
     data = json.loads(Path(sys.argv[1]).read_text())
     out = Path(sys.argv[2])
     out.mkdir(parents=True, exist_ok=True)
-    for name, fn in (("stats", stats_card), ("langs", langs_card), ("streak", streak_card), ("activity", activity_card)):
-        (out / f"{name}.svg").write_text(fn(data), encoding="utf-8")
-    print("yazıldı:", ", ".join(f"{n}.svg" for n in ("stats", "langs", "streak", "activity")))
+    for lang in ("en", "tr"):
+        L = lang
+        for name, fn in (("stats", stats_card), ("langs", langs_card), ("streak", streak_card), ("activity", activity_card)):
+            (out / (f"{name}.svg" if lang == "en" else f"{name}-{lang}.svg")).write_text(fn(data), encoding="utf-8")
+    print("yazıldı: stats, langs, streak, activity (en/tr)")
