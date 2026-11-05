@@ -52,21 +52,21 @@ My main focus now is building end-to-end system architectures and blending them 
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake.svg?v=3">
-  <img alt="Contribution snake" src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake-light.svg?v=3" width="860">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake.svg?v=4">
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake-light.svg?v=4" width="860">
 </picture>
 
 <a href="https://nomlings.cc/badge"><img src="https://nomlings.cc/badge/BerkayTann?pet=byteling&color=%23e64cbd&scale=5" alt="Nomling: eats your real commits" /></a>
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/overview.svg?v=3" alt="GitHub stats and languages" width="860" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/overview.svg?v=4" alt="GitHub stats and languages" width="860" />
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/streak.svg?v=3" alt="Streak" width="860" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/streak.svg?v=4" alt="Streak" width="860" />
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/activity.svg?v=3" alt="Activity" width="860" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/activity.svg?v=4" alt="Activity" width="860" />
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/garden.svg?v=3" alt="Commit garden" width="860" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/garden.svg?v=4" alt="Commit garden" width="860" />
 
 </div>
 
