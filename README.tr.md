@@ -87,5 +87,5 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/berkaytan"><img src="https://img.shields.io/badge/LinkedIn-berkaytan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://www.instagram.com/bercode.js"><img src="https://img.shields.io/badge/Instagram-bercode.js-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-  <a href="mailto:brkytn@gmail.com"><img src="https://img.shields.io/badge/E--posta-brkytn%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="mailto:brkytn97@gmail.com"><img src="https://img.shields.io/badge/E--posta-brkytn97%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
