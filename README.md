@@ -1,15 +1,17 @@
-<!-- ÜST GÖRSEL: Kendi çizimin hazır olunca aşağıdaki capsule-render <img> satırını kendi dosyanla değiştir (örn. ./assets/banner.png) -->
+<p align="right">
+  <img src="https://komarev.com/ghpvc/?username=BerkayTann&label=views&color=b10fd2&labelColor=161b26&style=flat-square" alt="Profil görüntüleme" />
+</p>
+
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=soft&color=0:1a1b26,100:24283b&height=150&section=header&text=Berkay%20Tan&fontSize=42&fontColor=c0caf5&fontAlignY=45&desc=DevOps%20%C3%97%20JavaScript&descSize=16&descColor=7aa2f7&descAlignY=68" alt="Berkay Tan" />
-
-<a href="https://github.com/BerkayTann">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=16&duration=3200&pause=1200&color=7AA2F7&center=true&vCenter=true&width=560&lines=berkay%40infra%3A~%24+whoami;DevOps+%C3%97+JavaScript;10+y%C4%B1l+kurumsal+sistem+tecr%C3%BCbesi;Altyap%C4%B1dan+aray%C3%BCze+tutarl%C4%B1+sistemler" alt="Typing SVG" />
+<a href="https://ascii.rest/banner/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://ascii.rest/banner/Berkay%20Tan.dark.svg?color=e64cbd,b10fd2&effect=type&tagline=DevOps%20x%20JavaScript&size=s&bg=353e4b">
+    <img alt="Berkay Tan: DevOps x JavaScript" src="https://ascii.rest/banner/Berkay%20Tan.svg?color=e64cbd,b10fd2&effect=type&tagline=DevOps%20x%20JavaScript&size=s&bg=353e4b">
+  </picture>
 </a>
 
-<br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=BerkayTann&label=Profil+G%C3%B6r%C3%BCnt%C3%BClenme&color=24283b&labelColor=1a1b26&style=flat-square" alt="Profil sayacı" />
+<img src="./assets/scramble.svg" alt="berkay@infra:~$ whoami" width="760" />
 
 </div>
 
@@ -31,66 +33,54 @@
 
 <br/>
 
-## Teknoloji Yığını
+## Skill Set
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=js,ts,react,nextjs,nodejs,dotnet&theme=dark" alt="Uygulama" />
-  <br/>
-  <img src="https://skillicons.dev/icons?i=docker,kubernetes,nginx,gitlab,azure,git&theme=dark" alt="DevOps" />
-  <br/>
-  <img src="https://skillicons.dev/icons?i=postgres,mongodb,linux,windows&theme=dark" alt="Veri ve sistem" />
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Argo%20CD-24283b?style=flat-square&logo=argo&logoColor=EF7B4D" alt="Argo CD" />
-  <img src="https://img.shields.io/badge/Rancher-24283b?style=flat-square&logo=rancher&logoColor=0075A8" alt="Rancher" />
-  <img src="https://img.shields.io/badge/Portainer-24283b?style=flat-square&logo=portainer&logoColor=13BEF9" alt="Portainer" />
-  <img src="https://img.shields.io/badge/Gitea-24283b?style=flat-square&logo=gitea&logoColor=609926" alt="Gitea" />
-  <img src="https://img.shields.io/badge/Azure%20DevOps-24283b?style=flat-square&logo=azuredevops&logoColor=0078D7" alt="Azure DevOps" />
-  <img src="https://img.shields.io/badge/Phaser-24283b?style=flat-square&logo=phaser&logoColor=8B5CF6" alt="Phaser" />
-  <img src="https://img.shields.io/badge/Railway-24283b?style=flat-square&logo=railway&logoColor=white" alt="Railway" />
-</p>
+<img src="./assets/skills.svg" alt="Frontend, Backend, DevOps, Others, Studying" width="860" />
+
+<img src="./assets/marquee.svg" alt="Kayan beceri kartları" width="860" />
 
 <br/>
 
-## GitHub Aktivitesi
+<img src="./assets/octopus.svg" alt="Ahtapot" height="190" />
+<img src="./assets/whale.svg" alt="Docker balinası" height="190" />
+<img src="./assets/jellyfish.svg" alt="Denizanası" height="190" />
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=BerkayTann&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub istatistikleri" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=BerkayTann&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="En çok kullanılan diller" />
-</p>
+</div>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=BerkayTann&theme=tokyonight&hide_border=true" alt="Katkı serisi" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=BerkayTann&bg_color=1a1b26&color=7aa2f7&line=7aa2f7&point=c0caf5&area=true&area_color=7aa2f7&hide_border=true&radius=8" alt="Son 31 gün aktivite grafiği" />
-</p>
-
-<details>
-<summary>Daha fazla kart</summary>
 <br/>
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=BerkayTann&theme=tokyonight" alt="Profil özeti" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=BerkayTann&theme=tokyonight" alt="En çok commit atılan diller" />
-</p>
+## Aktivite
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=BerkayTann&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=10" alt="Kupalar" />
-</p>
+<div align="center">
 
-</details>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake.svg">
+  <img alt="Commit çizelgesi snake animasyonu" src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake-light.svg" width="860">
+</picture>
+
+<a href="https://nomlings.cc/badge"><img src="https://nomlings.cc/badge/BerkayTann?pet=byteling&color=%23e64cbd&scale=5" alt="Commit yiyen pet" /></a>
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/stats.svg" alt="GitHub istatistikleri" width="420" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/langs.svg" alt="En çok kullanılan diller" width="420" />
+
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/streak.svg" alt="Katkı serisi" width="860" />
+
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/activity.svg" alt="Son 31 gün aktivite" width="860" />
+
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/garden.svg" alt="Commit bahçesi" width="860" />
+
+</div>
 
 <br/>
 
 ## İletişim
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/berkaytan"><img src="https://img.shields.io/badge/LinkedIn-berkaytan-24283b?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
-  <a href="https://www.instagram.com/bercode.js"><img src="https://img.shields.io/badge/Instagram-bercode.js-24283b?style=flat-square&logo=instagram&logoColor=E4405F" alt="Instagram" /></a>
-  <a href="mailto:brkytn@gmail.com"><img src="https://img.shields.io/badge/E--posta-brkytn%40gmail.com-24283b?style=flat-square&logo=gmail&logoColor=EA4335" alt="E-posta" /></a>
+  <a href="https://www.linkedin.com/in/berkaytan"><img src="https://img.shields.io/badge/LinkedIn-berkaytan-161b26?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
+  <a href="https://www.instagram.com/bercode.js"><img src="https://img.shields.io/badge/Instagram-bercode.js-161b26?style=flat-square&logo=instagram&logoColor=E4405F" alt="Instagram" /></a>
+  <a href="mailto:brkytn@gmail.com"><img src="https://img.shields.io/badge/E--posta-brkytn%40gmail.com-161b26?style=flat-square&logo=gmail&logoColor=EA4335" alt="E-posta" /></a>
 </p>
-
-<img src="https://capsule-render.vercel.app/api?type=soft&color=0:1a1b26,100:24283b&height=60&section=footer" width="100%" alt="" />
