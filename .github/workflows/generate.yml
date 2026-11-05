@@ -1,0 +1,60 @@
+name: generate
+
+# İstatistik kartları, commit bahçesi ve snake SVG'lerini üretip `output` dalına yazar.
+# Çalışma zamanı: her 12 saatte bir, elle (Run workflow) ve generators/ değişince.
+
+on:
+  schedule:
+    - cron: "17 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "generators/**"
+      - ".github/workflows/generate.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # data.json yayınlanmasın diye dist/ dışında (RUNNER_TEMP) tutulur.
+      # GH_PAT secret'ı varsa özel repo katkıları da sayılır; yoksa GITHUB_TOKEN kullanılır.
+      - name: Veriyi çek ve SVG'leri üret
+        env:
+          GH_USER: ${{ github.repository_owner }}
+          GH_TOKEN: ${{ secrets.GH_PAT != '' && secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p dist
+          python generators/fetch_data.py "$RUNNER_TEMP/data.json"
+          python generators/render_stats.py "$RUNNER_TEMP/data.json" dist
+          python generators/render_garden.py "$RUNNER_TEMP/data.json" dist
+
+      - name: Snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=e64cbd&color_dots=1b1f2a,5c1f6b,8a1fa6,b10fd2,e64cbd
+            dist/snake-light.svg?color_snake=b10fd2&color_dots=ebedf0,f3c6ec,e48ad6,c13fc9,8a1fa6
+
+      - name: output dalına yayınla
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
