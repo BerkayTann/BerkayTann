@@ -52,21 +52,21 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake.svg?v=4">
-  <img alt="Commit çizelgesi snake animasyonu" src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake-light.svg?v=4" width="860">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake.svg?v=5">
+  <img alt="Commit çizelgesi snake animasyonu" src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/snake-light.svg?v=5" width="860">
 </picture>
 
 <a href="https://nomlings.cc/badge"><img src="https://nomlings.cc/badge/BerkayTann?pet=byteling&color=%23ff7a1a&scale=5" alt="Nomling: eats your real commits" /></a>
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/overview-tr.svg?v=4" alt="GitHub istatistikleri ve diller" width="860" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/overview-tr.svg?v=5" alt="GitHub istatistikleri ve diller" width="860" />
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/streak-tr.svg?v=4" alt="Streak" width="860" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/streak-tr.svg?v=5" alt="Streak" width="860" />
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/activity-tr.svg?v=4" alt="Activity" width="860" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/activity-tr.svg?v=5" alt="Activity" width="860" />
 
-<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/garden-tr.svg?v=4" alt="Commit garden" width="860" />
+<img src="https://raw.githubusercontent.com/BerkayTann/BerkayTann/output/garden-tr.svg?v=5" alt="Commit garden" width="860" />
 
 </div>
 
