@@ -74,10 +74,10 @@ LABELS = {"html5": "HTML5", "css3": "CSS3", "javascript": "JavaScript", "typescr
 def make_skills():
     cats = [
         ("Frontend", ["html5", "css3", "javascript", "react", "nextjs", "tailwind"]),
-        ("Backend", ["nodejs", "express", "dotnet", "postgres", "mongodb"]),
-        ("DevOps", ["docker", "nginx", "gitlab", "gitea", "portainer", "azuredevops"]),
+        ("Backend", ["nodejs", "express", "postgres", "mongodb"]),
+        ("DevOps", ["docker", "kubernetes", "nginx", "gitlab", "gitea", "portainer", "azuredevops"]),
         ("Others", ["git", "github", "linux", "windows", "railway", "phaser"]),
-        ("Studying", ["kubernetes", "argocd", "rancher", "typescript"]),
+        ("Studying", ["dotnet", "argocd", "rancher", "typescript"]),
     ]
     W, pad = 860, 14
     cw = (W - 2 * pad) / 3
